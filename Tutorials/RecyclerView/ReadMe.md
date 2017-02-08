@@ -107,7 +107,10 @@ The position of a data item within an Adapter.
 
 ![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step9.png)
 
+10) Create a model java class for **Student** 
 
+![]()
+![]()
 
 
 	
