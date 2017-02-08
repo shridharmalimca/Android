@@ -49,4 +49,4 @@
 
 ```
 
-![]()
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step6.png)
