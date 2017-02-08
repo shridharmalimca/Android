@@ -147,3 +147,175 @@ Name it **Student** and superclass **android.support.v7.widget.RecyclerView**
 
 ![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step12-1.png)
 
+
+13) Changes in the StudentAdapter class.
+
+**From**
+
+```
+
+public class StudentAdapter extends RecyclerView{
+
+}
+
+```
+
+**To**
+
+```
+
+public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHolder> {
+
+
+}
+
+```
+
+**Add below method in student Adpater class for extend MyViewHolder from RecyclerView.ViewHolder **
+
+```
+
+public class MyViewHolder extends RecyclerView.ViewHolder {
+        private TextView name;
+        public MyViewHolder(View view) {
+            super(view);
+        }
+    }
+
+
+```
+
+**Override RecyclerView method**
+
+- onCreateViewHolder() : create View(Cell). 
+- onBindViewHolder() : used when list view bind with data
+- getItemCount() : Used for get / set the size of the student list.
+
+**Complete code**
+
+```
+
+package com.example.shridharmali.recyclerview;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.List;
+
+/**
+ * Created by shridharmali on 2/8/17.
+ */
+
+public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHolder> {
+    private List<Student> studentList;
+
+    public StudentAdapter(List<Student> studentList) {
+        // Constructor
+        this.studentList = studentList;
+    }
+
+    // Override  onCreateViewHolder method
+    @Override
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View viewItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, parent,false);
+        return new MyViewHolder(viewItem);
+    }
+
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        Student stud = studentList.get(position);
+        holder.name.setText(stud.getName());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return studentList.size();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        private TextView name;
+        public MyViewHolder(View view) {
+            super(view);
+            name = (TextView)view.findViewById(R.id.name);
+        }
+    }
+}
+
+```
+
+
+14) Come back to MainActivity java class and declare 
+
+```
+	private List<Student> studentList = new ArrayList<>();   
+	private RecyclerView recyclerView;   
+	private StudentAdapter studentAdapter;
+    
+```
+
+15) In onCreate() Method 
+
+```
+	recyclerView = (RecyclerView)findViewById(R.id.recycler_view);            
+	patientAdapter = new PatientAdapter(patientList);
+	RecyclerView.LayoutManager patientLayoutManager = new LinearLayoutManager(getApplicationContext());
+	recyclerView.setLayoutManager(patientLayoutManager);
+	recyclerView.setHasFixedSize(true);
+	recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+	recyclerView.setItemAnimator(new DefaultItemAnimator());
+	recyclerView.setAdapter(patientAdapter);
+            
+```
+
+
+**Code looks like in MainActivity java class
+
+```
+
+package com.example.shridharmali.recyclerview;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    private List<Student> studentList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private StudentAdapter studentAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
+        studentAdapter = new StudentAdapter(studentList);
+        RecyclerView.LayoutManager patientLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(patientLayoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(studentAdapter);
+
+        getStudentData();
+    }
+
+    public void getStudentData() {
+        Student stud = new Student("Shridhar");
+        studentList.add(stud);
+    }
+}
+
+
+```
+
+![]()
+
+
