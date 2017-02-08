@@ -139,3 +139,10 @@ public class Student {
 
 ![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step11.png)
 	
+12) Now, Create Adpater class for RecyclerView 
+
+Name it **Student** and superclass **android.support.v7.widget.RecyclerView**
+
+![]()
+![]()
+
