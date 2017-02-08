@@ -143,6 +143,7 @@ public class Student {
 
 Name it **Student** and superclass **android.support.v7.widget.RecyclerView**
 
-![]()
-![]()
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step12.png)
+
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step12-1.png)
 
