@@ -454,7 +454,9 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
 19) **Output**
 
-![]()
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step19.png)
+
+
 
 
 
