@@ -114,7 +114,7 @@ The position of a data item within an Adapter.
 ![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step10-1.png)
 
 
-11) Create accessor and mutator method for name of student.
+11) Create accessor and mutator method for Student name.
 
 ```
 
@@ -137,4 +137,5 @@ public class Student {
 
 ```
 
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step11.png)
 	
