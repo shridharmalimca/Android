@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
         studentAdapter = new StudentAdapter(studentList);
-        RecyclerView.LayoutManager patientLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(patientLayoutManager);
+        RecyclerView.LayoutManager studentLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(studentLayoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(studentAdapter);
 
