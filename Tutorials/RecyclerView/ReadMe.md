@@ -67,5 +67,10 @@ The position of a data item within an Adapter.
 
    A view previously used to display data for a specific adapter position may be placed in a cache for later reuse to display the same type of data again later. This can drastically improve performance by skipping initial layout inflation or construction.
    
-   
+8) Create item_list.xml resource file, this resource file used create fields in the recycler view.
+
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step8.png)
+
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step8-1.png)
+
 	
