@@ -451,10 +451,28 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 ![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step18-1.png)
 
 
+**Add code in MainActivity java class**
+
+Add before line 
+
+```
+recyclerView.setAdapter(studentAdapter);
+
+```
+
+
+```
+recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+         
+```
+ 
 
 19) **Output**
 
 ![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step19.png)
+
+
 
 
 
