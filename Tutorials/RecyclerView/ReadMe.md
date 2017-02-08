@@ -347,7 +347,7 @@ public void getStudentData() {
 
 18) Add DeviderItemDecoration java class which is extends from RecyclerView.ItemDecoration.
 
-**COmplete Code**
+**Complete Code**
 
 ```
 
@@ -446,7 +446,15 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
 ```
 
+![]()
 
+![]()
+
+
+
+19) **Output**
+
+![]()
 
 
 

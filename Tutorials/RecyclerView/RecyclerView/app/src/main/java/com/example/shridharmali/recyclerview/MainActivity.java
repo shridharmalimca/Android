@@ -2,6 +2,7 @@ package com.example.shridharmali.recyclerview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         studentAdapter = new StudentAdapter(studentList);
         RecyclerView.LayoutManager studentLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(studentLayoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(studentAdapter);
 
