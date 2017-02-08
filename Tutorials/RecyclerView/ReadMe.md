@@ -340,7 +340,9 @@ public void getStudentData() {
     
 ```
 
-![]()
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step16.png)
+
+
 
 
 
