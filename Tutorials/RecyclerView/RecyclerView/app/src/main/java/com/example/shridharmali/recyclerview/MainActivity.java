@@ -32,5 +32,11 @@ public class MainActivity extends AppCompatActivity {
     public void getStudentData() {
         Student stud = new Student("Shridhar");
         studentList.add(stud);
+
+        stud = new Student("Hari");
+        studentList.add(stud);
+
+        stud = new Student("Krishna");
+        studentList.add(stud);
     }
 }

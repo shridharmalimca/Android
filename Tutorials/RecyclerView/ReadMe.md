@@ -323,4 +323,24 @@ public class MainActivity extends AppCompatActivity {
 ![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step15-1.png)
 
 
+16) Add more student names so we get the proper list view
+
+```
+
+public void getStudentData() {
+        Student stud = new Student("Shridhar");
+        studentList.add(stud);
+
+        stud = new Student("Hari");
+        studentList.add(stud);
+
+        stud = new Student("Krishna");
+        studentList.add(stud);
+    }
+    
+```
+
+![]()
+
+
 
