@@ -316,6 +316,9 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-![]()
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step15.png)
+
+![](https://github.com/shridharmalimca/Android/blob/master/Tutorials/RecyclerView/Step15-1.png)
+
 
 
