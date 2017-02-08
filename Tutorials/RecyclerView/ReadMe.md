@@ -260,14 +260,12 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHo
 15) In onCreate() Method 
 
 ```
-	recyclerView = (RecyclerView)findViewById(R.id.recycler_view);            
-	patientAdapter = new PatientAdapter(patientList);
-	RecyclerView.LayoutManager patientLayoutManager = new LinearLayoutManager(getApplicationContext());
-	recyclerView.setLayoutManager(patientLayoutManager);
-	recyclerView.setHasFixedSize(true);
-	recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-	recyclerView.setItemAnimator(new DefaultItemAnimator());
-	recyclerView.setAdapter(patientAdapter);
+		recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
+        studentAdapter = new StudentAdapter(studentList);
+        RecyclerView.LayoutManager studentLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(studentLayoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(studentAdapter);
             
 ```
 
